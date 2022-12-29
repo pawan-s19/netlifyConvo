@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/common.css" />
+    <link rel="stylesheet" href="/stylesheets/textChat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Convo</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <div class="nav__content">
+          <ul class="nav__list">
+            <li class="nav__list-item active-nav">
+              <a href="#" class="hover-target">Text Chat</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/enterRoom" class="hover-target">Group Chat</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/grantAccess" class="hover-target">Video Chat</a>
+            </li>
+            <li id="end" class="nav__list-item">
+              <a href="#" class="hover-target">New Chat</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/" class="hover-target">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="btnAndText">
+        <div class="allctn">
+          <div class="navTop">
+            <div class="logo">
+              <img src="/images/circle-chartnew.webp" alt="" />
+              <h3>CONVO</h3>
+            </div>
+            <div class="label">
+              <h6>😁 Chit-Chat to Banta Hai!</h6>
+            </div>
+          </div>
+          <div id="msgs">
+            <div class="msgCtn">
+              <h5>
+                <span class="outlined">Waiting</span> <span>for</span>
+                <span>someone</span> <span>to</span> <span>connect</span>
+              </h5>
+            </div>
+            <div class="typing">
+              <img src="/images/tp-unscreennew.webp" alt="" />
+              <small>Pawan is typing</small>
+            </div>
+            <div id="textareaWrapper">
+              <textarea
+                id="textarea"
+                autofocus
+                disabled
+                placeholder="Write your message..."
+              ></textarea>
+              <button id="send" class="btn">
+                <i class="ri-send-plane-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="topbar">
+            <a href="/">
+              <button
+                id="home"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Home Page"
+              >
+                <i class="ri-home-7-fill"></i>
+              </button>
+            </a>
+          </div>
+          <div class="bottombar">
+            <p>Links</p>
+            <a href="/enterRoom">
+              <button
+                id="room"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Group Chat"
+              >
+                <i class="ri-wechat-fill"></i>
+              </button>
+            </a>
+            <a href="/grantAccess">
+              <button
+                id="vid"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Video Chat"
+              >
+                <i class="ri-video-chat-line"></i>
+              </button>
+            </a>
+            <a href="#" id="end">
+              <button
+                id="txt"
+                type="button"
+                class="btn txt1"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="New Chat"
+              >
+                <i class="ri-chat-new-fill"></i>
+              </button>
+            </a>
+            <a href="#" id="sel">
+              <button
+                id="txt"
+                type="button"
+                class="btn txt2"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Select Chat"
+              >
+                <i class="ri-file-copy-fill"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-but-wrap">
+        <div class="menu-icon hover-target">
+          <span class="menu-icon__line menu-icon__line-left"></span>
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js"
+      integrity="sha512-mHO4BJ0ELk7Pb1AzhTi3zvUeRgq3RXVOu9tTRfnA6qOxGK4pG2u57DJYolI4KrEnnLTcH9/J5wNOozRTDaybXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/javascripts/textChat.js"></script>
+  </body>
+</html>

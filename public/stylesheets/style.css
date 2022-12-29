@@ -1,0 +1,175 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@font-face {
+  font-family: "Bree Serif";
+  src: url("../fonts/breeserif-regular-webfont.woff2") format("woff2"),
+    url("../fonts/breeserif-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gerdingan";
+  src: url("../fonts/Gerdingan-PersonalUse.woff2") format("woff2"),
+    url("../fonts/Gerdingan-PersonalUse.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Argiss";
+  src: url("../fonts/Argiss-EaLzl.woff2") format("woff2"),
+    url("../fonts/Argiss-EaLzl.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url(../images/backWallpaper5.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title small {
+  font-family: Argiss;
+  font-size: 1.2em;
+}
+
+.container h1 {
+  font-family: "Gerdingan";
+  color: #ffffff;
+  font-size: 120px;
+  margin-bottom: 10px;
+  line-height: 4rem;
+}
+
+.toast-body {
+  color: black;
+}
+
+/* .totalOnlineUsers {
+  position: absolute;
+  top: 53%;
+  left: 51%;
+  transform: translate(-50%, 0);
+  padding: 0.5em;
+  border-radius: 0px 0px 12px 12px;
+}
+.totalOnlineUsers h3 {
+  color: rgb(255, 255, 255);
+  font-family: Dosis;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 100;
+  white-space: nowrap;
+} */
+
+/* buttons styling */
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+  animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 2em transparent;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 var(--hover);
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.buttons .btn {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  font-family: "Bree Serif";
+}
+.buttons .btn:hover,
+.buttons .btn:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+.buttons .btn {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 0.7em 1.7em;
+}
+@media screen and (max-width: 620px) {
+  .container {
+    padding-top: 15px;
+  }
+  .container h1 {
+    font-size: 20vw;
+    margin-bottom: 0px;
+  }
+  .buttons {
+    margin-top: 0px;
+  }
+  .title {
+    margin-bottom: 10px;
+  }
+}

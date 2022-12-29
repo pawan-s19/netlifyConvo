@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/common.css" />
+    <link rel="stylesheet" href="/stylesheets/chatRoom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.griffininsight.com/css/animate.css"
+    />
+    <title>Convo</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <div class="nav__content">
+          <ul class="nav__list">
+            <li class="nav__list-item active-nav">
+              <a href="#" class="hover-target">Group Chat</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/enterRoom" class="hover-target">Leave Room</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/grantAccess" class="hover-target">Video Chat</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/textChat" class="hover-target">Text Chat</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/" class="hover-target">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="popupOverlay">
+        <div id="popup">
+          <div class="topPart">
+            <h4>Online Users</h4>
+            <h4 class="onlineNum">1</h4>
+          </div>
+          <div class="botPart">
+            <h6>Room: <span class="roomName">JavaScript</span></h6>
+            <div class="allUsersCtn"></div>
+          </div>
+        </div>
+      </div>
+      <div class="btnAndText">
+        <div class="participants">
+          <div class="topPart">
+            <div class="together">
+              <button
+                id="back"
+                type="button"
+                class="btn"
+                data-bs-placement="bottom"
+              >
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <h4>Online Users</h4>
+            </div>
+            <h4 class="onlineNum">1</h4>
+          </div>
+          <div class="botPart">
+            <h6>Room: <span class="roomName">JavaScript</span></h6>
+            <div class="allUsersCtn">
+              <div class="users">
+                <h5>Suresh</h5>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="allctn">
+          <div class="navTop">
+            <div class="logo">
+              <img src="/images/circle-chartnew.webp" alt="" />
+              <h3>CONVO</h3>
+            </div>
+            <div class="tagline">
+              <h6>😁 Chit-Chat to Banta Hai!</h6>
+            </div>
+            <div class="label">
+              <div id="box1" class="box activated">Messages</div>
+              <div id="box2" class="box">Participants</div>
+            </div>
+          </div>
+          <div id="msgs">
+            <div class="msgCtn"></div>
+            <div class="typing">
+              <img src="/images/tp-unscreennew.webp" alt="" />
+              <small>Pawan is typing</small>
+            </div>
+            <div id="textareaWrapper">
+              <textarea
+                id="textarea"
+                autofocus
+                placeholder="Write your message..."
+              ></textarea>
+              <button id="send" class="btn">
+                <i class="ri-send-plane-fill"></i>
+              </button>
+            </div>
+            <div id="alert">
+              <small class="tlt"><pre>Welcome To Chat Group</pre></small>
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <div class="topbar">
+            <a href="/">
+              <button
+                id="home"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Home Page"
+              >
+                <i class="ri-home-7-fill"></i>
+              </button>
+            </a>
+          </div>
+          <div class="bottombar">
+            <p>Links</p>
+            <a href="/enterRoom">
+              <button
+                id="room"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Leave Room"
+              >
+                <i class="ri-logout-box-line"></i>
+              </button>
+            </a>
+            <a href="/grantAccess">
+              <button
+                id="vid"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Video Chat"
+              >
+                <i class="ri-video-chat-line"></i>
+              </button>
+            </a>
+            <a href="/textChat">
+              <button
+                id="txt"
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Text Chat"
+              >
+                <i class="ri-chat-smile-2-line"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-but-wrap">
+        <div class="menu-icon hover-target">
+          <span class="menu-icon__line menu-icon__line-left"></span>
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+      integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js"
+      integrity="sha512-mHO4BJ0ELk7Pb1AzhTi3zvUeRgq3RXVOu9tTRfnA6qOxGK4pG2u57DJYolI4KrEnnLTcH9/J5wNOozRTDaybXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"
+      integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"
+      integrity="sha512-0bHMhYsdpiur1bT84kDH4D7cpxFQ9O7uA5yxVAqWC87h552Xt0swX4M+ZlXMKE8oPVRIJ5lAwXWO2UWeDwJJOw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/javascripts/chatRoom.js"></script>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

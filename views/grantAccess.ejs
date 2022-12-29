@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/grantAccess.css" />
+    <title>Convo</title>
+  </head>
+  <body>
+    <div class="main">
+      <form action="/videoChat" method="get" id="test">
+        <h3>Permissions Required</h3>
+        <div class="ctn">
+          <input required type="checkbox" class="large" id="checkbox1" />
+          <h4>
+            By checking the box you acknowledge that you have reviewed and agree
+            to be bound by Convo’s Terms of Service, Privacy Policy, and
+            Community Guidelines.
+          </h4>
+        </div>
+        <div class="ctn">
+          <input required type="checkbox" class="large" id="checkbox2" />
+          <h4>
+            You must be 18+ to use video chat feature. If you are between 13 to
+            18 years of age, you should use Convo only with the permission and
+            under the supervision of your legal guardian. People under the age
+            of 13 should not use this feature. See our Terms of Service for more
+            info. By checking the box you acknowledge and represent that you
+            comply with the specified age restrictions.
+          </h4>
+        </div>
+        <div id="btnCtn">
+          <button id="valBtn" class="btn-home">Proceed to Video Chat</button>
+        </div>
+        <a href="/">
+          <i id="close" class="ri-close-fill"></i>
+        </a>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/javascripts/grantAccess.js"></script>
+  </body>
+</html>
