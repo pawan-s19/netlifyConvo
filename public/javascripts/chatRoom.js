@@ -11,7 +11,7 @@ var istyping = false;
 var timeout = undefined;
 
 var userName = "default";
-var audio = new Audio("/media/messageArrived.mpeg");
+var audio = new Audio("/media/messageArrived.mp3");
 var joinedAudio = new Audio("/media/joined.mp3");
 var leftAudio = new Audio("/media/left.mp3");
 

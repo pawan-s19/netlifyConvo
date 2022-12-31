@@ -9,7 +9,7 @@ var endbtn = document.querySelectorAll("#end");
 var selbtn = document.querySelector("#sel");
 var txt = document.querySelector("textarea");
 
-var audio = new Audio("/media/messageArrived.mpeg");
+var audio = new Audio("/media/messageArrived.mp3");
 var joinedAudio = new Audio("/media/joined.mp3");
 var leftAudio = new Audio("/media/left.mp3");
 
